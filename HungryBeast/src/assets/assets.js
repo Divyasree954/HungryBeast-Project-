@@ -23,54 +23,60 @@ import pizzas from './Pizzas.jpg'
 import schezwan from './schezwan-chicken-fried-rice.jpg'
 import starter from './starter.jpg'
 import veg_starter_panner from './veg_starter_panner.jpg'
-import logo from './hglogo 1.png'
+// import logo from './hglogo 1.png'
+import menu_bg from './menu_bg.jpg'
+import chaithra from './chaithra.jpg'
+import cm from './cm.jpg'
+import cmenu from './cmenu.jpg'
+
+
 
 export const assets={
     bgimg,
     Chicken_Biryani_headers,familypack,
-    header_img,header,logo
+    header_img,header,menu_bg,chaithra,cm,cmenu
 }
 
 export const menu_list = [
     {
-        menu_name: "Veg Starters",
-        menu_image: starter
+        menu_image: starter,
+        menu_name: "Veg Starters"
     },
     {
-        menu_name: "Non-Veg Starters",
-        menu_image: nonvegstarter
+        menu_image: nonvegstarter,
+        menu_name: "Non-Veg Starters"
     },
     {
-        menu_name: "Main Course",
-        menu_image: mainCourse
+        menu_image: mainCourse,
+        menu_name: "Main Course"
     },
     {
-        menu_name: "Chef Special",
-        menu_image: chefSpecial
+        menu_image: chefSpecial,
+        menu_name: "Chef Special"
     },
     {
-        menu_name: "Fried Rice",
-        menu_image: chicken_fried_rice
+        menu_image: chicken_fried_rice,
+        menu_name: "Fried Rice"
     },
     {
-        menu_name: "Pizza",
-        menu_image: pizzas
+        menu_image: pizzas,
+        menu_name: "Pizza"
     },
     {
-        menu_name: "Momos",
-        menu_image:momos
+        menu_image:momos,
+        menu_name: "Momos"
     },
     {
-        menu_name: "Beverages",
-        menu_image: beverage
+        menu_image: beverage,
+        menu_name: "Beverages"
     },
     {
-        menu_name: "Ice Creams",
-        menu_image:icecreamdessert
+        menu_image:icecreamdessert,
+        menu_name: "Ice Creams"
     },
     {
-        menu_name: "Milk Shakes",
-        menu_image:milkshake
+        menu_image:milkshake,
+        menu_name: "Milk Shakes"
     }
 ]
 
