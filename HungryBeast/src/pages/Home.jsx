@@ -1,21 +1,18 @@
-import About from "../components/About/About"
-import NavHead from "../components/NavHead/NavHead"
-import Menu from '../components/Menu/Menu'
-import Reviews from '../components/Reviews/Reviews'
-import WorkerFooter from '../components/WorkerFooter/WorkerFooter'
-import FullMenu from '../components/FullMenu/FullMenu'
+import React from "react";
+import Reviews from "../components/Reviews/Reviews";
+
 const Home = () => {
   return (
     <div>
-      <NavHead/>
-      <About/>
-      <Menu/>
-      <FullMenu/>
-      <Reviews/>
-      <WorkerFooter/>
-      {/* this is home */}
+      {/* Commented out or remove the other components if they are causing placeholders */}
+      {/* <Navhead /> */}
+      {/* <About /> */}
+      {/* <Menu /> */}
+      {/* <WorkerFooter /> */}
+      
+      <Reviews />  {/* Only rendering the Reviews component */}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
