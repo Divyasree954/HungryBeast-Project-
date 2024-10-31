@@ -1,9 +1,8 @@
-// import React from 'react'
-import './reviews.css'
+import React from 'react'
 
 const Reviews = () => {
   return (
-    <div> </div>
+    <div>Reviews</div>
   )
 }
 
