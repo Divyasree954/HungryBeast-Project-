@@ -3,7 +3,7 @@ import './menu.css'
 
 const menu = () => {
   return (
-    <div> this is menu</div>
+    <div> </div>
   )
 }
 
