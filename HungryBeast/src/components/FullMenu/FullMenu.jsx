@@ -1,41 +1,54 @@
-import {MenuData } from '../../assets/assets';
-import './fullmenu.css'; 
+// src/components/Menu.js
+// import React from 'react';
+import { MenuData } from '../../assets/assets'; // Ensure the path to the assets is correct
+import './fullmenu.css'; // Import the CSS file for styling
 
-const Menu = () => {
+const FullMenu = () => {
   return (
-    <div className="full-menu min-h-screen  p-6">
-    <h1 className="text-center text-4xl font-bold mb-10 text-yellow-400">Our Menu</h1>
+    <div className="p-6  min-h-screen menu-container">
+      <h1 className="text-3xl font-bold text-center mb-8">
+        Our Menu
+      </h1>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10">
-      {MenuData.map((menu) => (
+      {MenuData.map((section, index) => (
+        
         <div
-          key={menu._id}
-          className=" p-6 flex flex-col items-center"
+          key={section._id}
+          className={`flex flex-col md:flex-row items-center justify-between max-w-4xl mx-auto my-8 ${
+            index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+          }`}
         >
-          <h2 className="text-2xl font-semibold mb-4 text-yellow-400">{menu.title}</h2>
-          <div className='flex justify-center items-center gap-10'>
+
+          {/* Section Image */}
+         
           <img
-            src={menu.image}
-            alt={menu.title}
-             className="min-w-full h-60 object-cover"
-          />
-          <ul className="w-full">
-            {menu.items.map((item, index) => (
-              <li
-                key={index}
-                className="flex justify-between border-b border-gray-700 py-2"
-              >
-                <p className='w-40 font-semibold text-xl  text-white'>{item.name}</p>
-                <p className="font-semibold text-white">₹{item.price}</p>
-              </li>
-            ))}
-          </ul>
+  src={section.image}
+  alt={section.title}
+  className="w-full md:w-[45%] lg:w-[40%] xl:w-[35%] rounded-lg shadow-md mb-4 md:mb-0 object-cover max-h-64"
+/>
+
+
+          {/* Menu Items */}
+          <div className="w-full md:w-1/2 space-y-4">
+            <h2 className="text-xl font-semibold text-center md:text-left">
+              {section.title}
+            </h2>
+            <ul className="space-y-2">
+              {section.items.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex justify-between px-4 py-2  shadow-md rounded-lg"
+                >
+                  <span className="font-bold text-white">{item.name}</span>
+                  <span className="text-white">₹{item.price}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       ))}
     </div>
-  </div>
   );
 };
 
-export default Menu;
+export default FullMenu;
