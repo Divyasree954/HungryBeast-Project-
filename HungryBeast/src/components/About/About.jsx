@@ -1,8 +1,8 @@
-// import React from 'react'
-import './about.css'
+import React from 'react'
+
 const About = () => {
   return (
-    <div> this is About</div>
+    <div>About</div>
   )
 }
 
